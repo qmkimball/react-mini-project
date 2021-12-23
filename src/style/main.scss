@@ -1,0 +1,61 @@
+html {
+    font-size: 62.5%; // 1rem is 10px
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 1px;
+    box-sizing: inherit;
+
+}
+
+body {
+    overflow-x: hidden;
+    font-weight: normal;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+    
+    .header-wrapper {
+        background-color: #f8edeb;
+        font-family: 'Shizuru', cursive;
+        font-size: 1.5em;
+        display: flex;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        border: solid 1px burlywood ;
+    }
+    
+    .content-wrapper {
+        background-color: #d8e2dc;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2.25rem;
+        font-weight: lighter;
+        word-spacing: 2px;  
+        border: solid 2px #e8e8e4;
+    }
+    
+    .align-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

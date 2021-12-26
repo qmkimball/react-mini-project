@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
+import Align from './align';
+import Hide from './hide';
+import Counter from './counter';
+
 export default class App extends Component {
   render() {
     return (
@@ -14,20 +18,10 @@ export default class App extends Component {
           <div>{moment().format('h:mm:ss a')}</div>
         </div>
           
-        <div className="content-wrapper">  
-          
-          <div className="align-me">
-            <p>Align Me</p>
-
-            <div className="btn-wrapper">
-              <button className="leftbtn">Left</button>
-
-              <button className="centerbtn">Center</button>
-              <button>Right</button>
-
-            </div>
-          </div>
-
+        <div className="content-wrapper">
+          <Align />
+          <Hide />
+          <Counter />
         </div>
       </div>
       

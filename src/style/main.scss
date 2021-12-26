@@ -45,17 +45,39 @@ body {
         border: solid 2px #e8e8e4;
     }
     
-    .align-me {
+    
+
+    .section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px;
-    }
+        .align {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px;
+            }
 
+    }
+    
     .btn-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        button {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffd7ba;
+            border: none;
+            margin: 10px;
+            font-family: 'Shizuru', cursive;
+            font-size: 16px;
+            border: solid 2px #fec89a;
+            border-radius: 4px;
+            padding: 5px 22px;
+        }
     }
 }

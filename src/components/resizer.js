@@ -17,24 +17,24 @@ export default class Resizer extends Component {
 
         }
         
-        this.sizeChanger = this.sizeChanger.bind(this)
+        // this.sizeChanger = this.sizeChanger.bind(this)
     }
 
-    sizeChanger() {
-        if (this.state.size == '2em') {
-            this.setState({
-                size: '2.5em'
-            });
-        } else if (this.state.size == '2.5em') {
-            this.setState({
-                size: '3em'
-            });
-        } else {
-            this.setState({
-                size: '3.5em'
-            });
-        }
-    }
+    // sizeChanger() {
+    //     if (this.state.size == '2em') {
+    //         this.setState({
+    //             size: '2.5em'
+    //         });
+    //     } else if (this.state.size == '2.5em') {
+    //         this.setState({
+    //             size: '3em'
+    //         });
+    //     } else {
+    //         this.setState({
+    //             size: '3.5em'
+    //         });
+    //     }
+    // }
     
     render() {
         return(

@@ -14,7 +14,7 @@ export default class Colors extends Component {
             
             name:'',
             message: '',
-            color: 'white'
+            color: 'black'
 
         }
         
@@ -22,7 +22,7 @@ export default class Colors extends Component {
     }
 
     colorChanger() {
-        if (this.state.color == 'white') {
+        if (this.state.color == 'black') {
             this.setState({
                 color: 'red'
             });
@@ -42,9 +42,13 @@ export default class Colors extends Component {
             this.setState({
                 color: 'orange'
             });
-        } else {
+        } else if(this.state.color == 'orange') {
             this.setState({
-                color: 'yellow'
+                color: 'white'
+            });
+        } else if(this.state.color == 'white') {
+            this.setState({
+                color: 'black'
             });
         }
     }

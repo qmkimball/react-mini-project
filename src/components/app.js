@@ -6,8 +6,18 @@ import Hide from './hide';
 import Counter from './counter';
 import Colors from './colors';
 import Resizer from './resizer';
+import ToggleClock from './toggleClock';
 
 export default class App extends Component {
+  
+  componentDidMount() {
+    this.liveTime = setInterval(() => {
+        this.setState({
+            time: String(new Date().toLocaleTimeString())
+        })
+    }, 1000)
+}
+
   render() {
     return (
       <div className='app'>
@@ -26,6 +36,7 @@ export default class App extends Component {
           <Counter />
           <Colors />
           <Resizer />
+          <ToggleClock />
 
         </div>
       </div>

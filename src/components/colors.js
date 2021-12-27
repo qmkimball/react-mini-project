@@ -63,6 +63,7 @@ export default class Colors extends Component {
                         {this.state.list.map(item => {
                             return(
                                 <li 
+                                    key="{item}"
                                     style={{ color: this.state.color }}
                                 >
                                     {item.message}

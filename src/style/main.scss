@@ -22,7 +22,7 @@ body {
 }
 
 .app {
-    
+    background-color: #d8e2dc;
     .header-wrapper {
         background-color: #f8edeb;
         font-family: 'Shizuru', cursive;
@@ -39,7 +39,7 @@ body {
     .content-wrapper {
         background-color: #d8e2dc;
         font-family: 'Bebas Neue', cursive;
-        font-size: 2.25rem;
+        
         font-weight: lighter;
         word-spacing: 2px;  
         border: solid 2px #e8e8e4;
@@ -53,13 +53,23 @@ body {
         justify-content: center;
         align-items: center;
         padding: 10px;
+        font-size: 2.25rem;
+        border: dotted 2px #f8edeb;
         .align {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 padding: 10px;
-            }
 
+                
+            }
+        .resizer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
     }
     
     .btn-wrapper {
@@ -70,6 +80,7 @@ body {
         button {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             background-color: #ffd7ba;
             border: none;
             margin: 10px;

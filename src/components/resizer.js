@@ -3,62 +3,59 @@ import React, { Component } from 'react';
 export default class Resizer extends Component {
     constructor() {
         super()
-        this.state = {
-            list: [
-                {
-                id: '1',
-                message: 'Make Me Bigger'
-                }
-            ],
-            
-            name:'',
-            message: '',
-            size: '2em'
+        this.state = {            
+            paragraph:'12',
+            increment: '2'
 
         }
         
-        // this.sizeChanger = this.sizeChanger.bind(this)
+       this.handleChange = this.handleChange.bind(this);
+       this.handleTextSizeIncrease = this.handleTextSizeIncrease.bind(this);
+       this.handleTextSizeDecrease = this.handleTextSizeDecrease.bind(this)
+    }
+    handleChange(event) {
+        this.setState({
+            increment: event.target.value,
+        });
     }
 
-    // sizeChanger() {
-    //     if (this.state.size == '2em') {
-    //         this.setState({
-    //             size: '2.5em'
-    //         });
-    //     } else if (this.state.size == '2.5em') {
-    //         this.setState({
-    //             size: '3em'
-    //         });
-    //     } else {
-    //         this.setState({
-    //             size: '3.5em'
-    //         });
-    //     }
-    // }
+    
+    handleTextSizeIncrease(){
+        for (let i = this.state.paragraph; i < 32; i++) {
+            this.setState({
+                paragraph: this.state.paragraph + parseInt(this.state.increment),
+            });
+        }
+    }
+
+    handleTextSizeDecrease(){
+        for (let i = this.state.paragraph; i > 6; i-- ) {
+            this.setState({
+                paragraph: this.state.paragraph + parseInt(this.state.increment),
+            });
+        }
+    }
+    
     
     render() {
         return(
             <div className="section">
-                <p>Change the size of the text below.</p>
+                <div className="resizer">
+                    <p>Change the size of the text below.</p>
+                    <p style={{ fontSize: this.state.paragraph }}>{this.state.paragraph}px</p>
+                    <input
+                        type="number"
+                        placeholder="Increment by ..."
+                        onChange={this.handleChange}
+                    />
+                </div>
 
-                <div className="messageDiv">
-                    <ul>
-                        {this.state.list.map(item => {
-                            return(
-                                <li 
-                                    style={{ size: this.state.size }}
-                                >
-                                    {item.message}
-                                    
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
-                
-                <div className="btn-wrapper">
-                    <button onClick={this.sizeChanger}>Change size!</button>
-                </div>
+                    
+                    
+                    <div className="btn-wrapper">
+                        <button onClick={this.handleTextSizeIncrease}>Bigger!</button>
+                        <button onClick={this.handleTextSizeDecrease}>Smaller!</button>
+                    </div>
             </div>
         )
     }

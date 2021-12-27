@@ -4,6 +4,8 @@ import moment from 'moment';
 import Align from './align';
 import Hide from './hide';
 import Counter from './counter';
+import Colors from './colors';
+import Resizer from './resizer';
 
 export default class App extends Component {
   render() {
@@ -22,6 +24,9 @@ export default class App extends Component {
           <Align />
           <Hide />
           <Counter />
+          <Colors />
+          <Resizer />
+
         </div>
       </div>
       
